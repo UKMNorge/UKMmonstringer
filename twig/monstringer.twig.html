@@ -1,4 +1,9 @@
 <h2>Lokalmønstringer i {{fylke.name}}</h2>
+
+<p>
+	<button class="btn btn-medium btn-primary">Send SMS til alle kontaktpersoner</button>
+	<a href="#" class="btn btn-medium btn-primary">Send e-post til alle kontaktpersoner</a>
+</p>
 <ol class="unstyled container_width">
 	{% for monstring in monstringer %}
 	<li class="well well-mini monstring {% if monstring.registered == false %}alert alert-error{% endif %}">

@@ -18,7 +18,7 @@ if(is_admin()) {
 	if(get_option('site_type') == 'fylke') {
 		add_action('admin_menu', 'UKMmonstringer_menu',100);
 		
-		add_action('UKMWPDASH_collect_infos', 'UKMmonstringer_dash');
+		add_action('UKMWPDASH_message_collector', 'UKMmonstringer_dash');
 	}
 }
 
@@ -28,6 +28,7 @@ function UKMmonstringer_menu() {
 }
 
 function UKMmonstringer_dash( $MESSAGES ) {
+	echo 'Hook to messages';
 	$MESSAGES[] = array('header' 	=> 'Flere av dine lokalmønstringer er ikke registrert!',
 						'level' 	=> 'alert-error',
 						'message' 	=> 'Velg "mønstringer" i menyen til venstre for å se hvilke');

@@ -7,7 +7,7 @@ $monstringer = $monstring->hent_lokalmonstringer();
 $monstringer = array_unique( $monstringer );
 
 $monstringer_data = array();
-
+$emails = '';
 foreach( $monstringer as $plid ) {
 	$pl = new monstring( $plid );
 
@@ -19,6 +19,9 @@ foreach( $monstringer as $plid ) {
 							  'email'	=> $k->g('email'),
 							  'picture' => $k->g('picture')
 							 );
+		$email = $k->g('email');
+		if( !empty( $email ) )
+			$emails .= $email .',';
 	}
 
 	$monstringer_data[] = array('name' 		=> $pl->g('pl_name'),
@@ -31,3 +34,4 @@ foreach( $monstringer as $plid ) {
 }
 $INFOS['monstringer'] = $monstringer_data;
 $INFOS['fylke']['name'] = $monstring->g('pl_name');
+$INFOS['mailtoall'] = $emails;

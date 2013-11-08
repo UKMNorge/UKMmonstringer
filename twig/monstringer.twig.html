@@ -20,12 +20,11 @@
 		<div class="infos">
 			<div class="starts pull-right">{{monstring.starter|date('d.m H:i')}}</div>
 			<h2>{{monstring.name}}</h2>
-			<div class="clearfix"></div>
 		</div>
 		<div class="details">
 			<h3>Kontaktpersoner</h3>
 			<table class="table">
-			{% for kontakt in kontaktpersoner %}
+			{% for kontakt in monstring.kontaktpersoner %}
 				<tr>
 					<td><img src="{{kontakt.info.picture}}" /></td>
 					<td>{{kontakt.info.name}}</td>

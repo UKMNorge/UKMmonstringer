@@ -30,10 +30,10 @@
 			<table class="table">
 			{% for kontakt in monstring.kontakter %}
 				<tr>
-					<td><img src="{{kontakt.info.picture}}" /></td>
-					<td>{{kontakt.info.name}}</td>
-					<td class="UKMSMS">{{kontakt.info.tlf}}</td>
-					<td class="UKMMAIL">{{kontakt.info.email}}</td>
+					<td><img src="{{kontakt.picture}}" /></td>
+					<td>{{kontakt.name}}</td>
+					<td class="UKMSMS">{{kontakt.phone}}</td>
+					<td class="UKMMAIL">{{kontakt.email}}</td>
 				</tr>
 			{% endfor %}
 			</table>

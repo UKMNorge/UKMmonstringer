@@ -14,5 +14,5 @@ jQuery(document).on('click', '.details_hide', function(){
 });
 
 jQuery(document).on('click', '.wpadmin', function(){
-	window.open(jQuery(this).attr('data-url'),'_newtab');
+	window.open(jQuery(this).attr('data-url'),'_blank');
 });

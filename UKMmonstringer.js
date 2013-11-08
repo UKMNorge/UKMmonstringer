@@ -16,3 +16,12 @@ jQuery(document).on('click', '.details_hide', function(){
 jQuery(document).on('click', '.wpadmin', function(){
 	window.open(jQuery(this).attr('data-url'),'_blank');
 });
+
+jQuery(document).on('click','#smstoall', function(){
+	var recipients = new Array();
+	jQuery('.UKMSMS').each(function(){
+		recipients.push( jQuery(this).find('a').html() );
+	});
+	jQuery('#UKMSMS_to').val( recipients.join(',') );
+	jQuery('#UKMSMS_form').submit();
+});

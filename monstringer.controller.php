@@ -15,7 +15,7 @@ foreach( $monstringer as $plid ) {
 	$monstringer_data[] = array('name' 		=> $pl->g('pl_name'),
 							  'url'			=> $pl->g('url'),
 							  'registered' 	=> $pl->registered(),
-							  'starter'		=> $pl->g('pl_start'),
+							  'starter'		=> $pl->starter(),
 							  'kommuner'	=> $pl->g('kommuner'),
 							  'kontakter'	=> $pl->kontakter(),
 							  );

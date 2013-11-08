@@ -2,21 +2,33 @@
 	width: 790px;
 }
 .monstring {
- padding: 5px;
+ padding: 5px 5px 5px 10px;
 }
 .monstring .actions div {
-width: 90px;
+width: 60px;
 text-align: center;
-margin: 0px;
+margin: 0px 10px 0px -5px;
+line-height: 10px;
 }
 .monstring .actions div img {
  width: 20px;
+ margin-bottom: 3px;
 }
 
-.monstring .infos .name {
-  width: 200px;
+.monstring h2 {
+ font-size: 24px;
+}
+.monstring h3 {
+ font-size: 18px;
+ margin: 3px;
 }
 
+.details {
+ margin-left: 130px;
+}
+.details table img {
+ width: 35px;
+}
 
 
 .clickable {

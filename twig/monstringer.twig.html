@@ -1,9 +1,9 @@
 <h2>Lokalmønstringer i {{fylke.name}}</h2>
 <ol class="unstyled container_width">
 	{% for monstring in monstringer %}
-	<li class="well well-mini monstring {% if monstring.registered %}alert alert-error{% endif %}">
+	<li class="well well-mini monstring {% if monstring.registered == false %}alert alert-error{% endif %}">
 
-		<div class="pull-right">{{monstring.starter}}</div>
+		<div class="starts pull-right">{{monstring.starter}}</div>
 
 		<div class="actions">
 			<div class="pull-left details_show clickable">

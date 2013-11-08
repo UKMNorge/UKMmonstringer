@@ -8,7 +8,7 @@ $monstringer = array_unique( $monstringer );
 $unregistered = 0;
 foreach( $monstringer as $plid ) {
 	$pl = new monstring( $plid );
-	if(!$pl->registered)
+	if(!$pl->registered())
 		$unregistered++;
 }
 

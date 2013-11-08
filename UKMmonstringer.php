@@ -29,9 +29,10 @@ function UKMmonstringer_menu() {
 
 function UKMmonstringer_dash( $MESSAGES ) {
 	echo 'Hook to messages';
-	$MESSAGES[] = array('header' 	=> 'Flere av dine lokalmønstringer er ikke registrert!',
-						'level' 	=> 'alert-error',
-						'message' 	=> 'Velg "mønstringer" i menyen til venstre for å se hvilke');
+	$MESSAGES[] = array('level' 	=> 'alert-error',
+						'header' 	=> 'Flere av dine lokalmønstringer er ikke registrert!',
+						'body' 	=> 'Velg "mønstringer" i menyen til venstre for å se hvilke'
+						);
 	return $MESSAGES;
 }
 

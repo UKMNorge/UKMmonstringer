@@ -34,4 +34,7 @@ function UKMmonstringer() {
 function UKMMonstringer_script() {
 	wp_enqueue_script('bootstrap_js');
 	wp_enqueue_style('bootstrap_css');
+	
+	wp_enqueue_style( 'UKMMonstringer_style', plugin_dir_url( __FILE__ ) .'UKMmonstringer.css');
+
 }

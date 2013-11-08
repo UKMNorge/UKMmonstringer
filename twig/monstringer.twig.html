@@ -1,30 +1,7 @@
 <h2>Lokalmønstringer i {{fylke.name}}</h2>
-<ol class="unstyled" style="width: 800px;">
-	<li>
-		<div class="actions">
-			<div class="pull-left details_show clickable">
-				<img src="//ico.ukm.no/sirkel-pluss-256.png" /><br />
-				<small>Vis detaljer</small>
-			</div>
-			<div class="pull-left details_hide clickable" style="display:none;">
-				<img src="//ico.ukm.no/sirkel-minus-256.png" /><br />
-				<small>Skjul detaljer</small>
-			</div>
-
-			<div class="pull-left upload clickable">
-				<img src="//ico.ukm.no/wordpress-32.png" /><br />
-				<small>Gå til kontrollpanel</small>
-			</div>
-		</div>
-		<div class="infos">
-			<div class="name">Mønstring</div>
-			<div class="starts">Starter</div>
-			<div class="kommuner">Kommuner</div>
-		</div>
-	</li>
-	
+<ol class="unstyled container_width">
 	{% for monstring in monstringer %}
-	<li>
+	<li class="well well-mini monstring">
 		<div class="actions">
 			<div class="pull-left details_show clickable">
 				<img src="//ico.ukm.no/sirkel-pluss-256.png" /><br />
@@ -42,7 +19,7 @@
 		</div>
 		<div class="infos">
 			<div class="name">{{monstring.name}}</div>
-			<div class="starts">{{monstring.starter}}</div>
+			<div class="starts">{{monstring.starter|date('d.m H:i')}}</div>
 			<div class="kommuner">{{monstring.kommuner|length}}</div>
 		</div>
 	</li>

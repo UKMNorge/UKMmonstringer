@@ -13,7 +13,7 @@ foreach( $monstringer as $plid ) {
 
 
 	$monstringer_data[] = array('name' 		=> $pl->g('pl_name'),
-							  'url'			=> $pl->g('url'),
+							  'link'		=> $pl->g('link'),
 							  'registered' 	=> $pl->registered(),
 							  'starter'		=> $pl->starter(),
 							  'kommuner'	=> $pl->g('kommuner'),

@@ -12,4 +12,4 @@ foreach( $monstringer as $plid ) {
 		$unregistered++;
 }
 
-$is_showtime = (int) date('Y') == (int) get_option('season');
+$is_showtime = (int) date('Y') == (int) (get_option('season')-1);

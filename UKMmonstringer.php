@@ -15,13 +15,23 @@ require_once('UKM/monstring.class.php');
 ## HOOK MENU AND SCRIPTS
 if(is_admin()) {
 	global $blog_id;
-	if(get_option('site_type') != 'kommune')
-		add_action('admin_menu', 'UKMmonstringer_menu',100);		
+	if(get_option('site_type') == 'fylke') {
+		add_action('admin_menu', 'UKMmonstringer_menu',100);
+		
+		add_action('UKMWPDASH_collect_infos', 'UKMmonstringer_dash');
+	}
 }
 
 function UKMmonstringer_menu() {
 	$page = add_menu_page('Mønstringer', 'Mønstringer', 'editor', 'UKMmonstringer', 'UKMmonstringer', 'http://ico.ukm.no/mapmarker-bubble-blue-menu.png',127);
 	add_action( 'admin_print_styles-' . $page, 'UKMMonstringer_script' );
+}
+
+function UKMmonstringer_dash( $MESSAGES ) {
+	$MESSAGES[] = array('header' 	=> 'Flere av dine lokalmønstringer er ikke registrert!',
+						'level' 	=> 'alert-error',
+						'message' 	=> 'Velg "mønstringer" i menyen til venstre for å se hvilke');
+	return $MESSAGES;
 }
 
 function UKMmonstringer() {

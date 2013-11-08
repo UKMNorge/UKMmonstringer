@@ -13,6 +13,7 @@ foreach( $monstringer as $plid ) {
 
 	$kontakt_arr = array();
 	$kontakter = $pl->kontakter();
+	if(is_array($kontakter))
 	foreach( $kontakter as $k ) {
 		$kontakt_arr[] = array( 'name'	=> $k->g('name'),
 							  'phone'	=> $k->g('tlf'),

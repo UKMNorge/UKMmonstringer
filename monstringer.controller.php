@@ -18,7 +18,7 @@ foreach( $monstringer as $plid ) {
 							  'phone'	=> $k->g('tlf'),
 							  'mail'	=> $k->g('email'),
 							  'picture' => $k->g('picture')
-							 )
+							 );
 	}
 
 	$monstringer_data[] = array('name' 		=> $pl->g('pl_name'),

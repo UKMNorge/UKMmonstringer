@@ -16,7 +16,7 @@ foreach( $monstringer as $plid ) {
 	foreach( $kontakter as $k ) {
 		$kontakt_arr[] = array( 'name'	=> $k->g('name'),
 							  'phone'	=> $k->g('tlf'),
-							  'mail'	=> $k->g('email'),
+							  'email'	=> $k->g('email'),
 							  'picture' => $k->g('picture')
 							 );
 	}

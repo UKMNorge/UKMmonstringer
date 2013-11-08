@@ -28,11 +28,21 @@ function UKMmonstringer_menu() {
 }
 
 function UKMmonstringer_dash( $MESSAGES ) {
-	echo 'Hook to messages';
-	$MESSAGES[] = array('level' 	=> 'alert-error',
-						'header' 	=> 'Flere av dine lokalmønstringer er ikke registrert!',
-						'body' 	=> 'Velg "mønstringer" i menyen til venstre for å se hvilke'
-						);
+	if( get_option('site_type') != 'fylke' )
+		return $MESSAGES;
+
+	require_once('monstringer.hook_controller.php');
+	if($unregistered > 0)
+		$MESSAGES[] = array('level' 	=> 'alert-error',
+							'header' 	=> $unregistered . ' av dine lokalmønstringer er ikke registrert!',
+							'body' 	=> 'Velg "mønstringer" i menyen til venstre for å se hvilke'
+							);
+	elseif($is_showtime) {
+		$MESSAGES[] = array('level' 	=> 'alert-success',
+							'header' 	=> 'Alle dine lokalmønstringer registrert!',
+							'body' 	=> 'Det liker vi!'
+							);
+	}
 	return $MESSAGES;
 }
 

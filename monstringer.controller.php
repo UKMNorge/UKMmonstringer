@@ -20,8 +20,5 @@ foreach( $monstringer as $plid ) {
 							  'kontakter'	=> $pl->kontakter(),
 							  );
 }
-
-var_dump($monstringer_data);
-
 $INFOS['monstringer'] = $monstringer_data;
 $INFOS['fylke']['name'] = $monstring->g('pl_name');

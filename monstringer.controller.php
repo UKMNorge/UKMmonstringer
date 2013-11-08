@@ -10,12 +10,18 @@ $monstringer_data = array();
 
 foreach( $monstringer as $plid ) {
 	$pl = new monstring( $plid );
+
+
 	$monstringer_data[] = array('name' 		=> $pl->g('pl_name'),
 							  'url'			=> $pl->g('url'),
 							  'registered' 	=> $pl->registered(),
 							  'starter'		=> $pl->g('pl_start'),
+							  'kommuner'	=> $pl->g('kommuner'),
+							  'kontakter'	=> $pl->kontakter(),
 							  );
 }
+
+var_dump($monstringer_data);
 
 $INFOS['monstringer'] = $monstringer_data;
 $INFOS['fylke']['name'] = $monstring->g('pl_name');

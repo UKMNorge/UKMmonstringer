@@ -12,7 +12,7 @@
 	</thead>
 	
 	{% for monstring in monstringer %}
-		<tr {% if !monstring.registered %}class="error"{% endif %}>
+		<tr {% if monstring.registered is not true %}class="error"{% endif %}>
 			<td>{{monstring.name}}</td>
 			<td>{{monstring.name}}</td>
 			<td>{{monstring.name}}</td>

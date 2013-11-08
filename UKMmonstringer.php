@@ -18,7 +18,7 @@ if(is_admin()) {
 	if(get_option('site_type') == 'fylke') {
 		add_action('admin_menu', 'UKMmonstringer_menu',100);
 		
-		add_action('UKMWPDASH_message_collector', 'UKMmonstringer_dash');
+		add_filter('UKMWPDASH_messages', 'UKMmonstringer_dash');
 	}
 }
 

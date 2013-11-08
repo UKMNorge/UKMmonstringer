@@ -1,3 +1,18 @@
 .container_width {
 	width: 790px;
 }
+.monstring {
+ padding: 5px;
+}
+.monstring .actions div {
+width: 90px;
+text-align: center;
+margin: 0px;
+}
+.monstring .actions div img {
+ width: 20px;
+}
+
+.monstring .infos .name {
+  width: 200px;
+}

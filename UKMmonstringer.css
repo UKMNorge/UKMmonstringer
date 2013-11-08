@@ -1,6 +1,13 @@
 .container_width {
 	width: 790px;
 }
+
+#buttoncontainer {
+ margin-bottom: 10px;
+}
+#buttoncontainer a {
+ margin-left: 10px;
+}
 .monstring {
  padding: 5px 5px 5px 10px;
 }

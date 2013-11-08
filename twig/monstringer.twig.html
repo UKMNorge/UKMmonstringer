@@ -2,6 +2,9 @@
 <ol class="unstyled container_width">
 	{% for monstring in monstringer %}
 	<li class="well well-mini monstring">
+
+		<div class="pull-right">{{monstring.starter|date('d.m H:i')}}</div>
+
 		<div class="actions">
 			<div class="pull-left details_show clickable">
 				<img src="//ico.ukm.no/sirkel-pluss-256.png" /><br />
@@ -17,14 +20,15 @@
 				<small>Gå til kontrollpanel</small>
 			</div>
 		</div>
-		<div class="infos">
-			<div class="starts pull-right">{{monstring.starter|date('d.m H:i')}}</div>
-			<h2>{{monstring.name}}</h2>
-		</div>
+		
+		<h2>{{monstring.name}}</h2>
+
+		<div class="clearfix"></div>
+		
 		<div class="details">
 			<h3>Kontaktpersoner</h3>
 			<table class="table">
-			{% for kontakt in monstring.kontaktpersoner %}
+			{% for kontakt in monstring.kontakter %}
 				<tr>
 					<td><img src="{{kontakt.info.picture}}" /></td>
 					<td>{{kontakt.info.name}}</td>

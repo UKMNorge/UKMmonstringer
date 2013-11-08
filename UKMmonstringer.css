@@ -16,3 +16,9 @@ margin: 0px;
 .monstring .infos .name {
   width: 200px;
 }
+
+
+
+.clickable {
+	cursor: pointer;
+}

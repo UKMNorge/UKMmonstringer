@@ -20,10 +20,18 @@ if(is_admin()) {
 }
 
 function UKMmonstringer_menu() {
-	$page = add_menu_page('Mønstringer', 'Mønstringer', 'editor', 'UKMmonstringer', 'UKMmonstringer', 'http://ico.ukm.no/mapmarker-bubble-blue-menu.png',126);
+	$page = add_menu_page('Mønstringer', 'Mønstringer', 'editor', 'UKMmonstringer', 'UKMmonstringer', 'http://ico.ukm.no/mapmarker-bubble-blue-menu.png',127);
+	add_action( 'admin_print_styles-' . $page, 'UKMMonstringer_script' );
 }
 
 function UKMmonstringer() {
+	$INFOS = array();
 	require_once('monstringer.controller.php');
-	echo TWIG('monstringer.twig.html', $infos , dirname(__FILE__));
+	echo TWIG('monstringer.twig.html', $INFOS , dirname(__FILE__));
+}
+
+## INCLUDE SCRIPTS
+function UKMMonstringer_script() {
+	wp_enqueue_script('bootstrap_js');
+	wp_enqueue_style('bootstrap_css');
 }

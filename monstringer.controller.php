@@ -22,7 +22,7 @@ foreach( $monstringer as $plid ) {
 							 );
 		$email = $k->g('email');
 		if( !empty( $email ) )
-			$emails .= $email .',';
+			$emails .= $email .';';
 	}
 
 	$monstringer_data[] = array('name' 		=> $pl->g('pl_name'),

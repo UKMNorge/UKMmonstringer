@@ -2,10 +2,10 @@
 
 <div id="buttoncontainer" class="container_width">
 	<a href="mailto:{{mailtoall}}" class="pull-right btn btn-medium btn-primary" style="text-decoration: none;">
-		Send e-post til alle kontaktpersoner
+		Send e-post til alle lokalkontakter
 	</a>
 	<button class="pull-right btn btn-medium btn-primary" id="smstoall">
-		Send SMS til alle kontaktpersoner
+		Send SMS til alle lokalkontakter
 	</button>
 	<div class="clearfix"></div>
 </div>
@@ -39,7 +39,7 @@
 		<div class="clearfix"></div>
 		
 		<div class="details" style="display:none;">
-			<h3>Kontaktpersoner</h3>
+			<h3>lokalkontakter</h3>
 			<table class="table">
 			{% for kontakt in monstring.kontakter %}
 				<tr>

@@ -35,7 +35,7 @@ function UKMmonstringer_dash( $MESSAGES ) {
 	if($unregistered > 0)
 		$MESSAGES[] = array('level' 	=> 'alert-error',
 							'header' 	=> $unregistered . ' av dine lokalmønstringer er ikke registrert!',
-							'body' 	=> 'Velg "mønstringer" i menyen til venstre for å se hvilke'
+							'body' 	=> 'Velg "lokalmønstringer" i menyen til venstre for å se hvilke'
 							);
 	elseif($is_showtime) {
 		$MESSAGES[] = array('level' 	=> 'alert-success',

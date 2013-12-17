@@ -16,15 +16,15 @@ require_once('UKM/monstring.class.php');
 if(is_admin()) {
 	global $blog_id;
 	if(get_option('site_type') == 'fylke') {
-		add_action('admin_menu', 'UKMmonstringer_menu',100);
+		add_action('UKM_admin_menu', 'UKMmonstringer_menu',100);
 		
 		add_filter('UKMWPDASH_messages', 'UKMmonstringer_dash');
 	}
 }
 
 function UKMmonstringer_menu() {
-	$page = add_menu_page('Lokal-mønstringer', 'Lokal-mønstringer', 'editor', 'UKMmonstringer', 'UKMmonstringer', 'http://ico.ukm.no/mapmarker-bubble-blue-menu.png',127);
-	add_action( 'admin_print_styles-' . $page, 'UKMMonstringer_script' );
+	UKM_add_menu_page('resources','Lokal-mønstringer', 'Lokal-mønstringer', 'editor', 'UKMmonstringer', 'UKMmonstringer', 'http://ico.ukm.no/mapmarker-bubble-blue-menu.png',20);
+	UKM_add_scripts_and_styles('UKMmonstringer', 'UKMMonstringer_script' );
 }
 
 function UKMmonstringer_dash( $MESSAGES ) {

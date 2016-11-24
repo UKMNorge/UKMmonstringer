@@ -13,7 +13,7 @@ if($is_showtime) {
 	
 	foreach( $monstringer as $plid ) {
 		$pl = new monstring( $plid );
-		if(!$pl->registered())
+		if( !$pl->registered() && $pl->g('pl_name') != 'Gjester' )
 			$unregistered++;
 	}	
 }

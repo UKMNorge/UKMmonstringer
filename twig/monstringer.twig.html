@@ -43,7 +43,7 @@
 			<table class="table">
 			{% for kontakt in monstring.kontakter %}
 				<tr>
-					<td><img src="{{kontakt.picture}}" /></td>
+					<td><img src="{{kontakt.picture|replace({'http:':'https:'})}}" /></td>
 					<td>{{kontakt.name}}</td>
 					<td class="UKMSMS">{{kontakt.phone}}</td>
 					<td><a href="mailto:{{kontakt.email}}">{{kontakt.email}}</a></td>

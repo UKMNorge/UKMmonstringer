@@ -23,7 +23,7 @@ if(is_admin()) {
 }
 
 function UKMmonstringer_menu() {
-	UKM_add_menu_page('resources','Lokal-mønstringer', 'Lokal-mønstringer', 'editor', 'UKMmonstringer', 'UKMmonstringer', 'http://ico.ukm.no/mapmarker-bubble-blue-menu.png',20);
+	UKM_add_menu_page('resources','Lokal-mønstringer', 'Lokal-mønstringer', 'editor', 'UKMmonstringer', 'UKMmonstringer', '//ico.ukm.no/mapmarker-bubble-blue-menu.png',20);
 	UKM_add_scripts_and_styles('UKMmonstringer', 'UKMMonstringer_script' );
 }
 
